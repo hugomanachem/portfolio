@@ -19,7 +19,7 @@ function Navbar() {
 
       <div  className="navbar-links">            
             <Link>Accueil</Link>
-            <Link>A propos de moi</Link>
+            <Link>à propos de moi</Link>
             <Link>Mes compétences</Link>
             <Link>Mes projets</Link>
       </div>

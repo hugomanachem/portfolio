@@ -3,359 +3,490 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 .main-section {
-    width: 100%;
-    height: 673px;
-    max-height: 820px;
-    background-color: #101C26;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  width: 100%;
+  height: 673px;
+  max-height: 820px;
+  background-color: #101c26;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .main-text {
-    margin: auto;
-    width : 80%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.main-btn {
-    width: 100%;
-    display: flex;
-    justify-content: end;
-    position: absolute;
-    top: 550px;
-    
-}
-
-.main-title {
-    width : 60%;
-    max-width: 936px;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.2em;
-    color: #FFFFFF;
-    text-align: center;
-    text-transform: uppercase;
-    overflow-wrap: break-word;
-}
-
-.main-headline {
-    margin-top: 20px;
-    font-family: "Courier Prime", monospace;
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 1.2em;
-    color: #FFFFFF;
-    text-align: center;
-    overflow-wrap: break-word;
-}
-
-.main-section strong {
-    color: #0085FF;
-}
-
-.contact-btn {
-    border: none;
-    height: 46px;
-    width: 174px;
-    border-radius:  10px 0 0 10px;
-    margin-bottom: 50px;
-    background-color: #0085FF;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 700;
-    font-size: 13px;
-    color: #F7F7F7;
-    text-transform: uppercase;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-a {
-    text-decoration: none;
+  margin: auto;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .toggle-next-container {
-    display: none;
+  display: none;
 }
 
 .toggle-next-container p {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 700;
-    font-size: 18px;
-    color: #FFFFFF;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #ffffff;
 }
 
 .toggle-next-container img {
-    margin-top: 10px;
-    width: 34px;
+  margin-top: 10px;
+  width: 34px;
+}
+
+.main-btn {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  position: absolute;
+  top: 550px;
+}
+
+.main-title {
+  width: 257px;
+  max-width: 936px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.2em;
+  color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+  overflow-wrap: break-word;
+}
+
+.main-headline {
+  margin-top: 20px;
+  font-family: "Courier Prime", monospace;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 1.2em;
+  color: #ffffff;
+  text-align: center;
+  overflow-wrap: break-word;
+}
+
+.main-section strong {
+  color: #0085ff;
+}
+
+.contact-btn {
+  border: none;
+  height: 46px;
+  width: 174px;
+  border-radius: 10px 0 0 10px;
+  margin-bottom: 50px;
+  background-color: #0085ff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  color: #f7f7f7;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a {
+  text-decoration: none;
 }
 
 .about-section {
-    width: 100%;
-    height: 832px;
-    background-color: #F7F7F7;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .section-title {
-    width: 60%;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 700;
-    font-size: 20px;
-    text-transform: uppercase;
+  width: 80%;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  text-transform: uppercase;
 }
 
 .white-colored {
-    color: #FFFFFF ;
+  color: #ffffff;
 }
 
 .black-colored {
-    color : #000000;
+  color: #000000;
 }
 
 .about-content {
-    width : 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .about-text {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .profil-img {
-    width: 170px;
-    height: 170px;
-    margin-bottom: 40px;
-    background-image: url("assets/profil-img.jpg");
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    border-radius: 14px;
+  width: 170px;
+  height: 170px;
+  margin-bottom: 40px;
+  background-image: url("assets/profil-img.jpg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 14px;
 }
 
 .about-text > p {
-    width: 60%;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 500;
-    font-size: 13px;
-    line-height: 15px;
-    text-align: justify;
+  width: 60%;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 15px;
 }
 
 .ironhack-img {
-    width: 82px;
-    height: 82px;
-    margin: 5px 0;
-    background-image: url("assets/ironhack-logo.png");
-    background-position: center;
-    background-size: cover;
+  width: 82px;
+  height: 82px;
+  margin: 5px 0;
+  background-image: url("assets/ironhack-logo.png");
+  background-position: center;
+  background-size: cover;
 }
 
-.ironhack-diplome p, .utt-diplome p {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 700;
-    font-size: 13px;
-    line-height: 16px;
-    text-align: center;
+.ironhack-diplome p,
+.utt-diplome p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 16px;
+  text-align: center;
 }
 
 .utt-img {
-    width: 82px;
-    height: 37px;
-    margin: 20px 0;
-    background-image: url("assets/utt-logo.png");
-    background-position: center;
-    background-size: cover;
+  width: 82px;
+  height: 37px;
+  margin: 20px 0;
+  background-image: url("assets/utt-logo.png");
+  background-position: center;
+  background-size: cover;
 }
 
-
-
-.ironhack-diplome, .utt-diplome {
-    width: 55%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+.ironhack-diplome,
+.utt-diplome {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .cv-btn {
-    width: 232px;
-    height: 46px;
-    border-radius: 10px;
-    background-color: #0085FF;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 232px;
+  height: 46px;
+  border-radius: 10px;
+  background-color: #0085ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .cv-btn p {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 700;
-    font-size: 13px;
-    line-height: 15px;
-    text-align: center;
-    color: #F7F7F7;
-    text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 15px;
+  text-align: center;
+  color: #f7f7f7;
+  text-transform: uppercase;
 }
 
 .skills-section-container {
+  width: 100%;
+  height: 958px;
+  background-color: #101c26;
+}
+
+.projects-section-container {
+  width: 100%;
+  height: fit-content;
+  color: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.projects-section-container h2 {
+    margin : 50px 0;
+}
+
+.bd-example {
+    margin-bottom: 50px;
+}
+
+.carousel-caption {
+  background-color: #000000;
+}
+
+.carousel-caption h5 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 15px;
+  text-align: center;
+  color: #f7f7f7;
+  text-transform: uppercase;
+}
+
+.carousel-caption p {
+  font-family: "Courrier Prime", monospace;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 15px;
+  text-align: center;
+  color: #f7f7f7;
+}
+
+@media screen and (min-width: 480px) {
+  .about-section {
+    height: 832px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .main-section {
+    height: 100vh;
+    min-height: 700px;
+  }
+
+  .main-title {
     width: 100%;
-    height: 958px;
-    background-color: #101C26 ;
-}
+    padding-top: 100px;
+    font-size: 64px;
+    line-height: 78px;
+  }
 
+  .main-headline {
+    font-size: 52px;
+    line-height: 58px;
+  }
 
-/**POLICE D'ECRITURE**/
-@media screen and (min-width: 1200px) {
-    .main-title {
-        font-size: 64px;
-        line-height: 78px;
-    }
+  .toggle-next-container {
+    position: relative;
+    bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .main-headline {
-        font-size: 52px;
-        line-height: 58px;
-    }
+  .section-title {
+    width: 100%;
+    max-width: 1034px;
 
-    .contact-btn p {
-            font-size: 18px;
-            line-height: 22px;
-    }
+    font-size: 36px;
+    line-height: 44px;
+  }
 
-    .section-title {
-      font-size: 36px;
-      line-height: 44px;  
-    }
+  .contact-btn {
+    height: 58px;
+    position: absolute;
+    bottom: -120px;
+    margin: 0;
+  }
 
-    .about-text > p {
-       font-size: 18px;
-       line-height: 22px; 
-    }
+  .contact-btn p {
+    font-size: 16px;
+    line-height: 22px;
+  }
 
-    .ironhack-diplome p,.utt-diplome p {
-        font-size: 18px;
-        line-height: 22px; 
-    }
+  .about-content {
+    max-width: 1034px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 
-    .cv-btn {
-        font-size: 16px;
-        line-height: 19.5px;
-    }
-}
+  .profil-img {
+    width: 343px;
+    height: 332px;
+    background-size: 100%;
+  }
 
-/**LAYOUT**/
-@media screen and (min-width: 1200px) {
-    .main-title {
-        width: 100%;
-    }
+  .about-text {
+    max-width: 625px;
+    align-items: start;
+  }
 
-    .toggle-next-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 40px;
-    }
+  .about-text > p {
+    width: 100%;
 
-    .section-title {
-        width: 100%;
-        max-width: 1034px;
-    }
+    font-size: 18px;
+    line-height: 22px;
+  }
 
-    .about-content {
-        max-width : 1034px;
-        flex-direction: row;
-        justify-content: space-between; 
-    }
+  .ironhack-diplome,
+  .utt-diplome {
+    width: 100%;
+    flex-direction: row;
+    justify-content: start;
+  }
 
-    .profil-img {
-        width: 343px;
-        height: 332px;
-        background-size: 100%;
-    }
+  .ironhack-diplome p,
+  .utt-diplome p {
+    width: 60%;
+    text-align: left;
+    margin-left: 20px;
 
-    .about-text {
-        max-width: 625px;
-        align-items: start;
-    }
+    font-size: 18px;
+    line-height: 22px;
+  }
 
-    .about-text > p {
-        width: 100%;
-    }
+  .ironhack-img {
+    background-position: right;
+    background-size: 140%;
+  }
 
-    .ironhack-diplome,.utt-diplome {
-        width: 100%;
-        flex-direction: row;
-        justify-content: start;
+  .cv-btn p {
+    font-size: 16px;
+    line-height: 19.5px;
+  }
 
-    }
-
-    .ironhack-diplome p , .utt-diplome p {
-        width : 60%;
-        text-align: left;
-        margin-left: 20px;
-    }
-
-    .ironhack-img {
-        background-position: right;
-        background-size: 140%;
-    }
+  .bd-example * {
+    max-width: 1140px;
+  }
 }

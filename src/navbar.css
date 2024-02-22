@@ -4,11 +4,12 @@
 }
 
 .navbar-container {
-    margin-top : 20px;
+    padding-top : 50px;
     width : 90%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: absolute;
 }
 
 .navbar-container p {

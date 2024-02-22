@@ -15,18 +15,17 @@ function Portfolio() {
           </h2>
         </div>
 
+        
         <Link className="main-btn">
           <div className="contact-btn">
             <p>Me contacter !</p>
           </div>
         </Link>
 
-        <div className="toggle-next-container">
+        <Link className="toggle-next-container">
           <p>On fait connaissance ?</p>
-          <Link>
             <img src="src\assets\arrow-down.png" alt="arrow down" />
-          </Link>
-        </div>
+        </Link>
       </section>
 
       <section className="about-section">
@@ -64,6 +63,91 @@ function Portfolio() {
         <h2 className="white-colored section-title">Mes compétences</h2>
       </section>
 
+      <section className="projects-section-container">
+        <h2 className="black-colored section-title">Mes projets</h2>
+          <div className="bd-example w-75">
+            <div
+              id="carouselExampleCaptions"
+              className="carousel slide"
+              data-ride="carousel"
+            >
+              <ol className="carousel-indicators">
+                <li
+                  data-target="#carouselExampleCaptions"
+                  data-slide-to="0"
+                  className="active"
+                ></li>
+                <li
+                  data-target="#carouselExampleCaptions"
+                  data-slide-to="1"
+                ></li>
+                <li
+                  data-target="#carouselExampleCaptions"
+                  data-slide-to="2"
+                ></li>
+              </ol>
+              <div className="carousel-inner">
+                <div className="carousel-item active">
+                  <img
+                    src="src\assets\games-wiki-img.png"
+                    className="bg-opacity-10 d-block w-100"
+                    alt="Games Wiki"
+                  />
+                  <div className="carousel-caption d-none d-md-block">
+                    <h5>Games Wiki</h5>
+                    <p>React, Express, Node, MongoDB</p>
+                  </div>
+                </div>
+                <div className="carousel-item">
+                  <img
+                    src="src\assets\date-flow-img.png"
+                    className="d-block w-100"
+                    alt="Date Flow"
+                  />
+                  <div className="carousel-caption d-none d-md-block">
+                    <h5>Date Flow</h5>
+                    <p>React, Javascript, CSS, HTML</p>
+                  </div>
+                </div>
+                <div className="carousel-item">
+                  <img
+                    src="src\assets\trick-or-treat-img.png"
+                    className="d-block w-100"
+                    alt="Trick or Treat"
+                  />
+                  <div className="carousel-caption d-none d-md-block">
+                    <h5>Trick or Treat</h5>
+                    <p>Javascript, CSS, HTML</p>
+                  </div>
+                </div>
+              </div>
+              <a
+                className="carousel-control-prev"
+                href="#carouselExampleCaptions"
+                role="button"
+                data-slide="prev"
+              >
+                <span
+                  className="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span className="sr-only">Previous</span>
+              </a>
+              <a
+                className="carousel-control-next"
+                href="#carouselExampleCaptions"
+                role="button"
+                data-slide="next"
+              >
+                <span
+                  className="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span className="sr-only">Next</span>
+              </a>
+            </div>
+          </div>
+      </section>
     </>
   );
 }
