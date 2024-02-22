@@ -428,6 +428,10 @@ a {
     position: absolute;
     bottom: -120px;
     margin: 0;
+    justify-content: end;
+    padding-right : 5%;
+    padding-left: 25px;
+    width: fit-content;
   }
 
   .contact-btn p {
@@ -435,7 +439,14 @@ a {
     line-height: 22px;
   }
 
+  .about-section {
+    height: 100vh;
+    min-height: 700px;
+    justify-content: center;
+  }
+
   .about-content {
+    margin : 50px 0;
     max-width: 1034px;
     flex-direction: row;
     justify-content: space-between;
@@ -479,6 +490,11 @@ a {
   .ironhack-img {
     background-position: right;
     background-size: 140%;
+  }
+
+  .cv-btn {
+    width: 309px;
+    height: 56px;
   }
 
   .cv-btn p {
