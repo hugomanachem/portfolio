@@ -3,8 +3,11 @@ import { Link } from "react-router-dom";
 import React from "react";
 
 function Portfolio() {
+  let homeSectionRef = React.useRef();
   let contactSectionRef = React.useRef();
   let aboutSectionRef = React.useRef();
+  let skillsSectionRef = React.useRef();
+  let projectsSectionRef = React.useRef();
 
   function scrollTo(ref) {
     if (!ref.current) return;
@@ -12,8 +15,8 @@ function Portfolio() {
   }
   return (
     <>
-      <section className="main-section">
-        <Navbar />
+      <section ref={homeSectionRef} className="main-section">
+        <Navbar callbackToScrollTo = {scrollTo} homeSectionRef = {homeSectionRef} aboutSectionRef = {aboutSectionRef} skillsSectionRef = {skillsSectionRef} projectsSectionRef = {projectsSectionRef} />
 
         <div className="main-text">
           <h1 className="main-title">Hugo Manachem</h1>
@@ -70,11 +73,11 @@ function Portfolio() {
       </a>
       </section>
 
-      <section className="skills-section-container">
+      <section ref={skillsSectionRef} className="skills-section-container">
         <h2 className="white-colored section-title">Mes compétences</h2>
       </section>
 
-      <section className="projects-section-container">
+      <section ref={projectsSectionRef} className="projects-section-container">
         <h2 className="black-colored section-title">Mes projets</h2>
         <div className="bd-example w-75">
           <div

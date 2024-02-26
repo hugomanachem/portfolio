@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import '../navbar.css';
 
-function Navbar() {
+function Navbar(props) {
 
     function myFunction() {
         var x = document.getElementById("navbar");
@@ -18,10 +18,10 @@ function Navbar() {
       <Link onClick={myFunction}><img className='hamburger-icon' src='src\assets\hamburger-menu.png' alt='hamburger-menu'/></Link>
 
       <div  className="navbar-links">            
-            <Link>Accueil</Link>
-            <Link>à propos de moi</Link>
-            <Link>Mes compétences</Link>
-            <Link>Mes projets</Link>
+            <Link onClick={() => props.callbackToScrollTo(props.homeSectionRef)}>Accueil</Link>
+            <Link onClick={() => props.callbackToScrollTo(props.aboutSectionRef)} >à propos de moi</Link>
+            <Link onClick={() => props.callbackToScrollTo(props.skillsSectionRef)}>Mes compétences</Link>
+            <Link onClick={() => props.callbackToScrollTo(props.projectsSectionRef)}>Mes projets</Link>
       </div>
 
       <p>FR</p>
