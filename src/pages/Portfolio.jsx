@@ -167,6 +167,10 @@ function Portfolio() {
           <button>Envoyer</button>
         </form>
       </section>
+
+      <footer>
+        <p>2024 - Hugo Manachem</p>
+      </footer>
     </>
   );
 }
