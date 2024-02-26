@@ -340,6 +340,9 @@ a {
   width: 100%;
   height: 958px;
   background-color: #101c26;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .projects-section-container {
@@ -383,9 +386,134 @@ a {
   color: #f7f7f7;
 }
 
+.contact-section-container {
+  width: 100%;
+  height: fit-content;
+  background-color: #0085FF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-section-container h2 {
+  margin : 50px 0;
+}
+
+.personal-infos-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.personal-infos-container h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.personal-infos-container p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: #000000;
+}
+
+.personal-infos-container h3 + p {
+  margin : 10px 0;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px 0;
+}
+
+.form-container * {
+  margin : 20px 0;
+}
+
+.form-container *::placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 24px;
+  color: #0000008F;
+  opacity: 1; /* Firefox */
+}
+
+#email {
+  text-decoration: underline;
+}
+
+.form-container input {
+  width: 309px;
+  height: 50px;
+  border: none;
+  border-radius: 16px;
+}
+
+.form-container textarea {
+  width: 309px;
+  height: 214px;
+  border: none;
+  border-radius: 16px;
+}
+
+.form-container button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19.5px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background-color: #101C26;
+  border: none;
+  width: 180px;
+  height: 56px;
+  border-radius: 16px;
+}
+
 @media screen and (min-width: 480px) {
   .about-section {
     height: 832px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .personal-infos-container {
+    width: 80%;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+
+  .form-container {
+    display: grid;
+    gap : 20px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px 50px 50px;
+  }
+
+  .form-container textarea {
+    grid-row-start: 1;
+    grid-row-end: 4;
+    height: 100%;
+    margin: 0;
+  }
+
+  .form-container input {
+    margin: 0;
+  }
+
+  .form-container button {
+    margin: 0;
+    grid-column-start: 2;
+    grid-row-start: 3;
   }
 }
 
@@ -504,5 +632,14 @@ a {
 
   .bd-example * {
     max-width: 1140px;
+  }
+
+  .form-container {
+    width: 100%;
+    max-width: 1034px;
+  }
+
+  .form-container textarea, .form-container input {
+    width: 480px;
   }
 }

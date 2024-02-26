@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import Portfolio from "./assets/pages/Portfolio";
+import Portfolio from "../src/pages/Portfolio";
 
 
 function App() {
