@@ -138,6 +138,10 @@ table {
   align-items: center;
 }
 
+.main-section a:hover, .about-section a {
+  text-decoration: none;
+}
+
 .main-text {
   margin: auto;
   width: 80%;
@@ -156,6 +160,8 @@ table {
   font-size: 18px;
   color: #ffffff;
 }
+
+
 
 .toggle-next-container img {
   margin-top: 10px;
@@ -317,6 +323,7 @@ a {
 }
 
 .cv-btn {
+  border: none;
   width: 232px;
   height: 46px;
   border-radius: 10px;
@@ -324,9 +331,6 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.cv-btn p {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 13px;
@@ -334,6 +338,10 @@ a {
   text-align: center;
   color: #f7f7f7;
   text-transform: uppercase;
+}
+
+.cv-btn:hover {
+  text-decoration: none;
 }
 
 .skills-section-container {
@@ -640,12 +648,11 @@ footer p {
   .cv-btn {
     width: 309px;
     height: 56px;
-  }
-
-  .cv-btn p {
     font-size: 16px;
     line-height: 19.5px;
   }
+
+
 
   .bd-example * {
     max-width: 1140px;

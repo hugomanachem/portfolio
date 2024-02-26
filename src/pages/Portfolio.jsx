@@ -1,7 +1,15 @@
 import Navbar from "../components/Navbar";
 import { Link } from "react-router-dom";
+import React from "react";
 
 function Portfolio() {
+  let contactSectionRef = React.useRef();
+  let aboutSectionRef = React.useRef();
+
+  function scrollTo(ref) {
+    if (!ref.current) return;
+    ref.current.scrollIntoView({ behavior: "smooth" });
+  }
   return (
     <>
       <section className="main-section">
@@ -15,19 +23,20 @@ function Portfolio() {
           </h2>
         </div>
 
-        <Link className="main-btn">
-          <div className="contact-btn">
+        <Link className="main-btn" onClick={() => scrollTo(contactSectionRef)}>
+          <button className="contact-btn">
             <p>Me contacter !</p>
-          </div>
+          </button>
         </Link>
+        
 
-        <Link className="toggle-next-container">
+        <Link onClick={() => scrollTo(aboutSectionRef)} className="toggle-next-container">
           <p>On fait connaissance ?</p>
           <img src="src\assets\arrow-down.png" alt="arrow down" />
         </Link>
       </section>
 
-      <section className="about-section">
+      <section ref={aboutSectionRef} className="about-section">
         <h2 className="black-colored section-title">à propos de moi</h2>
         <div className="about-content">
           <div className="profil-img"></div>
@@ -51,11 +60,14 @@ function Portfolio() {
             </div>
           </div>
         </div>
-        <Link>
-          <div className="cv-btn">
-            <p>Télécharger mon cv</p>
-          </div>
-        </Link>
+        <a
+        href={"src/assets/CV_Hugo_MANACHEM.pdf"}
+        download="CV_Hugo_MANACHEM"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <button className="cv-btn">Télécharger mon CV</button>
+      </a>
       </section>
 
       <section className="skills-section-container">
@@ -142,7 +154,7 @@ function Portfolio() {
         </div>
       </section>
 
-      <section className="contact-section-container">
+      <section ref={contactSectionRef} className="contact-section-container">
         <h2 className="white-colored section-title">Contactez-moi !</h2>
         <div className="personal-infos-container">
           <h3>Hugo Manachem</h3>
