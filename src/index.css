@@ -445,13 +445,21 @@ a {
   margin : 20px 0;
 }
 
-.form-container *::placeholder {
+.form-container *::placeholder{
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 12px;
   line-height: 24px;
   color: #0000008F;
   opacity: 1; /* Firefox */
+}
+
+.form-container input,.form-container textarea {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 24px;
+  color: #000000;
 }
 
 #email {
