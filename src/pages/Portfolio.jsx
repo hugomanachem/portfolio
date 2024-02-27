@@ -1,6 +1,8 @@
 import Navbar from "../components/Navbar";
 import { Link } from "react-router-dom";
 import React from "react";
+import { useState } from "react";
+import emailjs from '@emailjs/browser';
 
 function Portfolio() {
   let homeSectionRef = React.useRef();
@@ -13,6 +15,23 @@ function Portfolio() {
     if (!ref.current) return;
     ref.current.scrollIntoView({ behavior: "smooth" });
   }
+
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm(process.env.REACT_APP_MAIL_SERVICE_ID,process.env.REACT_APP_MAIL_TEMPLATE_ID,e.target,process.env.REACT_APP_MAIL_PUBLIC_KEY);
+    alert("Message envoyé!");
+    
+    setName("");
+    setEmail("");
+    setMessage("");
+
+  }
+
   return (
     <>
       <section ref={homeSectionRef} className="main-section">
@@ -96,33 +115,33 @@ function Portfolio() {
             </ol>
             <div className="carousel-inner">
               <div className="carousel-item active">
-                <img
+                <a href="https://ironhack-game-wiki.netlify.app/" target="_blank"><img
                   src="src\assets\games-wiki-img.png"
                   className="bg-opacity-10 d-block w-100"
                   alt="Games Wiki"
-                />
+                /></a>
                 <div className="carousel-caption d-none d-md-block">
                   <h5>Games Wiki</h5>
                   <p>React, Express, Node, MongoDB</p>
                 </div>
               </div>
               <div className="carousel-item">
-                <img
+              <a href="https://dateflow.netlify.app/" target="_blank"><img
                   src="src\assets\date-flow-img.png"
                   className="d-block w-100"
                   alt="Date Flow"
-                />
+                /></a>
                 <div className="carousel-caption d-none d-md-block">
                   <h5>Date Flow</h5>
                   <p>React, Javascript, CSS, HTML</p>
                 </div>
               </div>
               <div className="carousel-item">
-                <img
+              <a href="https://hugomanachem.github.io/trick-or-treat/" target="_blank"><img
                   src="src\assets\trick-or-treat-img.png"
                   className="d-block w-100"
                   alt="Trick or Treat"
-                />
+                /></a>
                 <div className="carousel-caption d-none d-md-block">
                   <h5>Trick or Treat</h5>
                   <p>Javascript, CSS, HTML</p>
@@ -165,17 +184,21 @@ function Portfolio() {
           <p id="email">hugomanachem.pro@gmail.com</p>
         </div>
 
-        <form className="form-container">
-          <textarea name="message" placeholder="Votre message..." />
+        <form onSubmit={sendEmail} className="form-container">
+          <textarea name="message" value={message} onChange={(e) => { setMessage(e.target.value) }} placeholder="Votre message..." />
           <input
             type="text"
-            name="nom"
+            name="name"
+            value={name}
+            onChange={(e) => { setName(e.target.value) }}
             placeholder="Votre nom (Obligatoire)"
             required
           />
           <input
             type="email"
-            name="email"
+            name="email_from"
+            value={email}
+            onChange={(e) => { setEmail(e.target.value) }}
             placeholder="Votre adresse mail (Obligatoire)"
             required
           />
