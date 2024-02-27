@@ -369,6 +369,8 @@ a {
 
 .bd-example {
     margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
 }
 
 .carousel-caption {
