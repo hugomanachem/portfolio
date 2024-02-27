@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import React from "react";
 import { useState } from "react";
 import emailjs from '@emailjs/browser';
+import cv from "../assets/CV_Hugo_MANACHEM.pdf";
 import arrow_down from "../assets/arrow-down.png";
 import games_wiki_img from "../assets/games-wiki-img.png";
 import date_flow_img from "../assets/date-flow-img.png";
@@ -87,7 +88,7 @@ function Portfolio() {
           </div>
         </div>
         <a
-        href={"src/assets/CV_Hugo_MANACHEM.pdf"}
+        href={cv}
         download="CV_Hugo_MANACHEM"
         target="_blank"
         rel="noreferrer"
