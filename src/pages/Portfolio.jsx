@@ -2,7 +2,7 @@ import Navbar from "../components/Navbar";
 import { Link } from "react-router-dom";
 import React from "react";
 import { useState } from "react";
-import emailjs from '@emailjs/browser';
+import emailjs from "@emailjs/browser";
 import cv from "../assets/CV_Hugo_MANACHEM.pdf";
 import arrow_down from "../assets/arrow-down.png";
 import games_wiki_img from "../assets/games-wiki-img.png";
@@ -28,19 +28,29 @@ function Portfolio() {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm(import.meta.env.VITE_MAIL_SERVICE_ID, import.meta.env.VITE_MAIL_TEMPLATE_ID, e.target, import.meta.env.VITE_MAIL_PUBLIC_KEY);
+    emailjs.sendForm(
+      import.meta.env.VITE_MAIL_SERVICE_ID,
+      import.meta.env.VITE_MAIL_TEMPLATE_ID,
+      e.target,
+      import.meta.env.VITE_MAIL_PUBLIC_KEY
+    );
     alert("Message envoyé!");
-    
+
     setName("");
     setEmail("");
     setMessage("");
-
-  }
+  };
 
   return (
     <>
       <section ref={homeSectionRef} className="main-section">
-        <Navbar callbackToScrollTo = {scrollTo} homeSectionRef = {homeSectionRef} aboutSectionRef = {aboutSectionRef} skillsSectionRef = {skillsSectionRef} projectsSectionRef = {projectsSectionRef} />
+        <Navbar
+          callbackToScrollTo={scrollTo}
+          homeSectionRef={homeSectionRef}
+          aboutSectionRef={aboutSectionRef}
+          skillsSectionRef={skillsSectionRef}
+          projectsSectionRef={projectsSectionRef}
+        />
 
         <div className="main-text">
           <h1 className="main-title">Hugo Manachem</h1>
@@ -55,9 +65,11 @@ function Portfolio() {
             <p>Me contacter !</p>
           </button>
         </Link>
-        
 
-        <Link onClick={() => scrollTo(aboutSectionRef)} className="toggle-next-container">
+        <Link
+          onClick={() => scrollTo(aboutSectionRef)}
+          className="toggle-next-container"
+        >
           <p>On fait connaissance ?</p>
           <img src={arrow_down} alt="arrow down" />
         </Link>
@@ -88,13 +100,13 @@ function Portfolio() {
           </div>
         </div>
         <a
-        href={cv}
-        download="CV_Hugo_MANACHEM"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <button className="cv-btn">Télécharger mon CV</button>
-      </a>
+          href={cv}
+          download="CV_Hugo_MANACHEM"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <button className="cv-btn">Télécharger mon CV</button>
+        </a>
       </section>
 
       <section ref={skillsSectionRef} className="skills-section-container">
@@ -120,33 +132,45 @@ function Portfolio() {
             </ol>
             <div className="carousel-inner">
               <div className="carousel-item active">
-                <a href="https://ironhack-game-wiki.netlify.app/" target="_blank"><img
-                  src={games_wiki_img}
-                  className="bg-opacity-10 d-block w-100"
-                  alt="Games Wiki"
-                /></a>
+                <a
+                  href="https://ironhack-game-wiki.netlify.app/"
+                  target="_blank"
+                >
+                  <img
+                    src={games_wiki_img}
+                    className="bg-opacity-10 d-block w-100"
+                    alt="Games Wiki"
+                  />
+                </a>
                 <div className="carousel-caption d-none d-md-block">
                   <h5>Games Wiki</h5>
                   <p>React, Express, Node, MongoDB</p>
                 </div>
               </div>
               <div className="carousel-item">
-              <a href="https://dateflow.netlify.app/" target="_blank"><img
-                  src={date_flow_img}
-                  className="d-block w-100"
-                  alt="Date Flow"
-                /></a>
+                <a href="https://dateflow.netlify.app/" target="_blank">
+                  <img
+                    src={date_flow_img}
+                    className="d-block w-100"
+                    alt="Date Flow"
+                  />
+                </a>
                 <div className="carousel-caption d-none d-md-block">
                   <h5>Date Flow</h5>
                   <p>React, Javascript, CSS, HTML</p>
                 </div>
               </div>
               <div className="carousel-item">
-              <a href="https://hugomanachem.github.io/trick-or-treat/" target="_blank"><img
-                  src={trick_or_treat_img}
-                  className="d-block w-100"
-                  alt="Trick or Treat"
-                /></a>
+                <a
+                  href="https://hugomanachem.github.io/trick-or-treat/"
+                  target="_blank"
+                >
+                  <img
+                    src={trick_or_treat_img}
+                    className="d-block w-100"
+                    alt="Trick or Treat"
+                  />
+                </a>
                 <div className="carousel-caption d-none d-md-block">
                   <h5>Trick or Treat</h5>
                   <p>Javascript, CSS, HTML</p>
@@ -190,12 +214,21 @@ function Portfolio() {
         </div>
 
         <form onSubmit={sendEmail} className="form-container">
-          <textarea name="message" value={message} onChange={(e) => { setMessage(e.target.value) }} placeholder="Votre message..." />
+          <textarea
+            name="message"
+            value={message}
+            onChange={(e) => {
+              setMessage(e.target.value);
+            }}
+            placeholder="Votre message..."
+          />
           <input
             type="text"
             name="name"
             value={name}
-            onChange={(e) => { setName(e.target.value) }}
+            onChange={(e) => {
+              setName(e.target.value);
+            }}
             placeholder="Votre nom (Obligatoire)"
             required
           />
@@ -203,7 +236,9 @@ function Portfolio() {
             type="email"
             name="email_from"
             value={email}
-            onChange={(e) => { setEmail(e.target.value) }}
+            onChange={(e) => {
+              setEmail(e.target.value);
+            }}
             placeholder="Votre adresse mail (Obligatoire)"
             required
           />
