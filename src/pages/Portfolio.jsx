@@ -3,6 +3,10 @@ import { Link } from "react-router-dom";
 import React from "react";
 import { useState } from "react";
 import emailjs from '@emailjs/browser';
+import arrow_down from "../assets/arrow-down.png";
+import games_wiki_img from "../assets/games-wiki-img.png";
+import date_flow_img from "../assets/date-flow-img.png";
+import trick_or_treat_img from "../assets/trick-or-treat-img.png";
 
 function Portfolio() {
   let homeSectionRef = React.useRef();
@@ -23,7 +27,7 @@ function Portfolio() {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm(process.env.REACT_APP_MAIL_SERVICE_ID,process.env.REACT_APP_MAIL_TEMPLATE_ID,e.target,process.env.REACT_APP_MAIL_PUBLIC_KEY);
+    emailjs.sendForm(import.meta.env.VITE_MAIL_SERVICE_ID, import.meta.env.VITE_MAIL_TEMPLATE_ID, e.target, import.meta.env.VITE_MAIL_PUBLIC_KEY);
     alert("Message envoyé!");
     
     setName("");
@@ -54,7 +58,7 @@ function Portfolio() {
 
         <Link onClick={() => scrollTo(aboutSectionRef)} className="toggle-next-container">
           <p>On fait connaissance ?</p>
-          <img src="src\assets\arrow-down.png" alt="arrow down" />
+          <img src={arrow_down} alt="arrow down" />
         </Link>
       </section>
 
@@ -116,7 +120,7 @@ function Portfolio() {
             <div className="carousel-inner">
               <div className="carousel-item active">
                 <a href="https://ironhack-game-wiki.netlify.app/" target="_blank"><img
-                  src="src\assets\games-wiki-img.png"
+                  src={games_wiki_img}
                   className="bg-opacity-10 d-block w-100"
                   alt="Games Wiki"
                 /></a>
@@ -127,7 +131,7 @@ function Portfolio() {
               </div>
               <div className="carousel-item">
               <a href="https://dateflow.netlify.app/" target="_blank"><img
-                  src="src\assets\date-flow-img.png"
+                  src={date_flow_img}
                   className="d-block w-100"
                   alt="Date Flow"
                 /></a>
@@ -138,7 +142,7 @@ function Portfolio() {
               </div>
               <div className="carousel-item">
               <a href="https://hugomanachem.github.io/trick-or-treat/" target="_blank"><img
-                  src="src\assets\trick-or-treat-img.png"
+                  src={trick_or_treat_img}
                   className="d-block w-100"
                   alt="Trick or Treat"
                 /></a>
