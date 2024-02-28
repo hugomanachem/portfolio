@@ -74,7 +74,7 @@ function Portfolio() {
           className="toggle-next-container"
         >
           <p>On fait connaissance ?</p>
-          <img src={arrow_down} alt="arrow down" />
+          <div className="arrow-down-container"></div>
         </Link>
       </section>
 

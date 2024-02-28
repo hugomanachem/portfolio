@@ -638,6 +638,19 @@ footer p {
     line-height: 58px;
   }
 
+  .arrow-down-container {
+    margin-top: 10px;
+    width: 34px;
+    height: 34px;
+    background-image: url("src/assets/arrow-down.png");
+    background-size: cover;
+  }
+
+  .arrow-down-container:hover {
+    background-image: url("src/assets/arrow_down_blue.png");
+    background-size: cover;
+  }
+
   .toggle-next-container {
     position: relative;
     bottom: 40px;
