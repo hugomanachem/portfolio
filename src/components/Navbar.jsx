@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import '../navbar.css';
+import hamburger_menu_img from "../assets/hamburger-menu.png"
 
 function Navbar(props) {
 
@@ -15,7 +16,7 @@ function Navbar(props) {
 
   return (
     <nav id="navbar" className="navbar-container">
-      <Link onClick={myFunction}><img className='hamburger-icon' src='src\assets\hamburger-menu.png' alt='hamburger-menu'/></Link>
+      <Link onClick={myFunction}><img className='hamburger-icon' src={hamburger_menu_img} alt='hamburger-menu'/></Link>
 
       <div  className="navbar-links">            
             <Link onClick={() => props.callbackToScrollTo(props.homeSectionRef)}>Accueil</Link>
