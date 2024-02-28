@@ -29,6 +29,10 @@
     text-transform: uppercase;
 }
 
+.navbar-links a:hover {
+    font-size: 18.5px;
+}
+
 .navbar-links {
     display: none;
 }
