@@ -448,6 +448,7 @@ a {
 }
 
 .form-container *::placeholder{
+  padding-left : 20px;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 12px;
