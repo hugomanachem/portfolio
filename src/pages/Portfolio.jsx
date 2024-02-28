@@ -8,6 +8,9 @@ import arrow_down from "../assets/arrow-down.png";
 import games_wiki_img from "../assets/games-wiki-img.png";
 import date_flow_img from "../assets/date-flow-img.png";
 import trick_or_treat_img from "../assets/trick-or-treat-img.png";
+import dev_front_end_logo from "../assets/dev_front_end_logo.png";
+import dev_back_end_logo from "../assets/dev_back_end_logo.png";
+import gestion_projet_logo from "../assets/gestion_projet_logo.png";
 
 function Portfolio() {
   let homeSectionRef = React.useRef();
@@ -111,6 +114,24 @@ function Portfolio() {
 
       <section ref={skillsSectionRef} className="skills-section-container">
         <h2 className="white-colored section-title">Mes compétences</h2>
+        <div className="skills-list">
+          <div className="skill-item">
+            <img src={dev_front_end_logo}/>
+            <h4>DEV FRONT END</h4>
+            <p className="skill-text">HTML, CSS, Javascript (ES8), React, Responsive Design</p>
+          </div>
+          <div className="skill-item">
+            <img src={dev_back_end_logo}/>
+            <h4>DEV BACK END</h4>
+            <p className="skill-text">Node JS, ExpressJS, MongoDB, MYSQL, API Rest</p>
+          </div>
+          <div className="skill-item">
+            <img src={gestion_projet_logo}/>
+            <h4>GESTION DE PROJET</h4>
+            <p className="skill-text">Analyse du besoin client Maquettage et test de solutions</p>
+            <p className="skill-text">Jira, Trello, Miro</p>
+          </div>
+        </div>
       </section>
 
       <section ref={projectsSectionRef} className="projects-section-container">
