@@ -247,7 +247,7 @@ function Portfolio() {
       </section>
 
       <footer>
-        <p>2024 - Hugo Manachem</p>
+        <p>© 2024 Hugo MANACHEM. All rights Reserved. Design by Pauline DENIZET.</p>
       </footer>
     </>
   );
