@@ -577,6 +577,7 @@ footer p {
   .main-title {
     width: fit-content;
   }
+
   .skills-list {
     width: 75%;
     max-width: 1034px;
@@ -598,6 +599,7 @@ footer p {
     gap: 20px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 50px 50px 50px;
+    margin-bottom: 75px;
   }
 
   .form-container textarea {
@@ -756,6 +758,7 @@ footer p {
   }
 
   .form-container {
+    margin-top : 25px;
     width: 100%;
     max-width: 1034px;
   }
