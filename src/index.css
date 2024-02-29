@@ -477,7 +477,7 @@ a {
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
-  color: #000000;
+  color: #f7f7f7;
   text-transform: uppercase;
 }
 
@@ -486,7 +486,7 @@ a {
   font-weight: 700;
   font-size: 18px;
   line-height: 22px;
-  color: #000000;
+  color: #f7f7f7;
 }
 
 .personal-infos-container h3 + p {
