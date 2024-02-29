@@ -138,7 +138,8 @@ table {
   align-items: center;
 }
 
-.main-section a:hover, .about-section a {
+.main-section a:hover,
+.about-section a {
   text-decoration: none;
 }
 
@@ -160,8 +161,6 @@ table {
   font-size: 18px;
   color: #ffffff;
 }
-
-
 
 .toggle-next-container img {
   margin-top: 10px;
@@ -354,7 +353,7 @@ a {
 }
 
 .skills-section-container h2 {
-  margin-top : 60px;
+  margin-top: 60px;
 }
 
 .skills-section-container h4 {
@@ -362,11 +361,11 @@ a {
   font-size: 18px;
   font-weight: 700;
   line-height: 22px;
-  color:#f7f7f7;
+  color: #f7f7f7;
 }
 
 .skills-list {
-  margin-top : 70px;
+  margin-top: 70px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -388,18 +387,18 @@ a {
 }
 
 .skill-text {
-  margin-top : 10px;
+  margin-top: 10px;
   width: 168px;
   font-family: "Montserrat", sans-serif;
   font-size: 18px;
   font-weight: 500;
   line-height: 22px;
-  color:#f7f7f7;
+  color: #f7f7f7;
   text-align: center;
 }
 
 .skill-item:last-child p {
-  width : 230px;
+  width: 230px;
 }
 
 .skill-item:last-child p:last-child {
@@ -421,13 +420,13 @@ a {
 }
 
 .projects-section-container h2 {
-    margin : 50px 0;
+  margin: 50px 0;
 }
 
 .bd-example {
-    margin-bottom: 50px;
-    display: flex;
-    justify-content: center;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
 }
 
 .carousel-caption {
@@ -456,14 +455,14 @@ a {
 .contact-section-container {
   width: 100%;
   height: fit-content;
-  background-color: #0085FF;
+  background-color: #0085ff;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .contact-section-container h2 {
-  margin : 50px 0;
+  margin: 50px 0;
 }
 
 .personal-infos-container {
@@ -490,7 +489,7 @@ a {
 }
 
 .personal-infos-container h3 + p {
-  margin : 10px 0;
+  margin: 10px 0;
 }
 
 .form-container {
@@ -501,20 +500,21 @@ a {
 }
 
 .form-container * {
-  margin : 20px 0;
+  margin: 20px 0;
 }
 
-.form-container *::placeholder{
-  padding-left : 20px;
+.form-container *::placeholder {
+  padding-left: 20px;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 12px;
   line-height: 24px;
-  color: #0000008F;
+  color: #0000008f;
   opacity: 1; /* Firefox */
 }
 
-.form-container input,.form-container textarea {
+.form-container input,
+.form-container textarea {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 12px;
@@ -546,8 +546,8 @@ a {
   font-size: 16px;
   line-height: 19.5px;
   text-transform: uppercase;
-  color: #FFFFFF;
-  background-color: #101C26;
+  color: #ffffff;
+  background-color: #101c26;
   border: none;
   width: 180px;
   height: 56px;
@@ -569,11 +569,14 @@ footer p {
   font-weight: 500;
   font-size: 16px;
   line-height: 19.5px;
-  color: #FFFFFF;
+  color: #ffffff;
   text-align: center;
 }
 
 @media screen and (min-width: 768px) {
+  .main-title {
+    width: fit-content;
+  }
   .skills-list {
     width: 75%;
     max-width: 1034px;
@@ -582,7 +585,6 @@ footer p {
     justify-content: space-between;
     align-items: start;
   }
-
 
   .personal-infos-container {
     width: 80%;
@@ -593,7 +595,7 @@ footer p {
 
   .form-container {
     display: grid;
-    gap : 20px;
+    gap: 20px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 50px 50px 50px;
   }
@@ -673,7 +675,7 @@ footer p {
     bottom: -120px;
     margin: 0;
     justify-content: end;
-    padding-right : 5%;
+    padding-right: 5%;
     padding-left: 25px;
     width: fit-content;
   }
@@ -692,7 +694,7 @@ footer p {
   }
 
   .about-content {
-    margin : 50px 0;
+    margin: 50px 0;
     max-width: 1034px;
     flex-direction: row;
     justify-content: space-between;
@@ -758,11 +760,12 @@ footer p {
     max-width: 1034px;
   }
 
-  .form-container textarea, .form-container input {
+  .form-container textarea,
+  .form-container input {
     width: 480px;
   }
 
   form button:hover {
-    font-size : 16.5px;
+    font-size: 16.5px;
   }
 }

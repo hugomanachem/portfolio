@@ -1,7 +1,7 @@
 import Navbar from "../components/Navbar";
 import { Link } from "react-router-dom";
 import React from "react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import emailjs from "@emailjs/browser";
 import cv from "../assets/CV_Hugo_MANACHEM.pdf";
 import arrow_down from "../assets/arrow-down.png";
@@ -44,6 +44,24 @@ function Portfolio() {
     setMessage("");
   };
 
+  const [headline, setHeadline] = useState("");
+  const fullHeadline = "Daéveloppeur Full-Stack";
+
+  useEffect(() => {
+    let index = 0;
+
+    const intervalId = setInterval(() => {
+      if (index < fullHeadline.length) {
+        setHeadline((prevText) => prevText + fullHeadline.charAt(index));
+        index++;
+      } else {
+        clearInterval(intervalId);
+      }
+    }, 100); // Adjust the interval duration as needed
+
+    return () => clearInterval(intervalId);
+  }, []);
+
   return (
     <>
       <section ref={homeSectionRef} className="main-section">
@@ -59,7 +77,7 @@ function Portfolio() {
           <h1 className="main-title">Hugo Manachem</h1>
           <h2 className="main-headline">
             {" "}
-            <strong>&lt;</strong> Développeur Full-Stack <strong>/&gt;</strong>
+            <strong>&lt;</strong> {headline} <strong>/&gt;</strong>
           </h2>
         </div>
 
@@ -116,19 +134,25 @@ function Portfolio() {
         <h2 className="white-colored section-title">Mes compétences</h2>
         <div className="skills-list">
           <div className="skill-item">
-            <img src={dev_front_end_logo}/>
+            <img src={dev_front_end_logo} />
             <h4>DEV FRONT END</h4>
-            <p className="skill-text">HTML, CSS, Javascript (ES8), React, Responsive Design</p>
+            <p className="skill-text">
+              HTML, CSS, Javascript (ES8), React, Responsive Design
+            </p>
           </div>
           <div className="skill-item">
-            <img src={dev_back_end_logo}/>
+            <img src={dev_back_end_logo} />
             <h4>DEV BACK END</h4>
-            <p className="skill-text">Node JS, ExpressJS, MongoDB, MYSQL, API Rest</p>
+            <p className="skill-text">
+              Node JS, ExpressJS, MongoDB, MYSQL, API Rest
+            </p>
           </div>
           <div className="skill-item">
-            <img src={gestion_projet_logo}/>
+            <img src={gestion_projet_logo} />
             <h4>GESTION DE PROJET</h4>
-            <p className="skill-text">Analyse du besoin client Maquettage et test de solutions</p>
+            <p className="skill-text">
+              Analyse du besoin client Maquettage et test de solutions
+            </p>
             <p className="skill-text">Jira, Trello, Miro</p>
           </div>
         </div>
@@ -268,7 +292,9 @@ function Portfolio() {
       </section>
 
       <footer>
-        <p>© 2024 Hugo MANACHEM. All rights Reserved. Design by Pauline DENIZET.</p>
+        <p>
+          © 2024 Hugo MANACHEM. All rights Reserved. Design by Pauline DENIZET.
+        </p>
       </footer>
     </>
   );
