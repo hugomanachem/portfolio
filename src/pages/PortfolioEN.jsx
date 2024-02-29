@@ -1,4 +1,3 @@
-import Navbar from "../components/Navbar";
 import { Link } from "react-router-dom";
 import React from "react";
 import { useEffect, useState } from "react";
@@ -11,8 +10,9 @@ import trick_or_treat_img from "../assets/trick-or-treat-img.png";
 import dev_front_end_logo from "../assets/dev_front_end_logo.png";
 import dev_back_end_logo from "../assets/dev_back_end_logo.png";
 import gestion_projet_logo from "../assets/gestion_projet_logo.png";
+import NavbarEN from "../components/NavbarEN";
 
-function Portfolio() {
+function PortfolioEN() {
   let homeSectionRef = React.useRef();
   let contactSectionRef = React.useRef();
   let aboutSectionRef = React.useRef();
@@ -37,7 +37,7 @@ function Portfolio() {
       e.target,
       import.meta.env.VITE_MAIL_PUBLIC_KEY
     );
-    alert("Message envoyé!");
+    alert("Message send!");
 
     setName("");
     setEmail("");
@@ -45,7 +45,7 @@ function Portfolio() {
   };
 
   const [headline, setHeadline] = useState("");
-  const fullHeadline = "Daéveloppeur Full-Stack";
+  const fullHeadline = "Faull-Stack Developer";
 
   useEffect(() => {
     let index = 0;
@@ -65,7 +65,7 @@ function Portfolio() {
   return (
     <>
       <section ref={homeSectionRef} className="main-section">
-        <Navbar
+        <NavbarEN
           callbackToScrollTo={scrollTo}
           homeSectionRef={homeSectionRef}
           aboutSectionRef={aboutSectionRef}
@@ -76,14 +76,13 @@ function Portfolio() {
         <div className="main-text">
           <h1 className="main-title">Hugo Manachem</h1>
           <h2 className="main-headline">
-            {" "}
-            <strong>&lt;</strong> {headline} <strong>/&gt;</strong>
+            <strong>&lt;</strong> {headline} <strong>&#47;&gt;</strong>
           </h2>
         </div>
 
         <Link className="main-btn" onClick={() => scrollTo(contactSectionRef)}>
           <button className="contact-btn">
-            <p>Me contacter !</p>
+            <p>Contact me !</p>
           </button>
         </Link>
 
@@ -91,22 +90,21 @@ function Portfolio() {
           onClick={() => scrollTo(aboutSectionRef)}
           className="toggle-next-container"
         >
-          <p>On fait connaissance ?</p>
+          <p>Let’s get to know each other</p>
           <div className="arrow-down-container"></div>
         </Link>
       </section>
 
       <section ref={aboutSectionRef} className="about-section">
-        <h2 className="black-colored section-title">à propos de moi</h2>
+        <h2 className="black-colored section-title">About me</h2>
         <div className="about-content">
           <div className="profil-img"></div>
           <div className="about-text">
             <p>
-              Ingénieur en informatique, mon expérience dans la gestion de
-              projet ainsi que mes compétences en développement Web me
-              permettant de travailler efficacement en équipe pour construire
-              des applications Web Full-Stack de manière rigoureuse et
-              organisée.
+              As a software engineer, my experience in project management as
+              well as my web development skills allow me to work effectively in
+              a team to build Full-Stack Web applications in a rigorous and
+              organized manner.
             </p>
             <div className="ironhack-diplome">
               <div className="ironhack-img"></div>
@@ -115,7 +113,7 @@ function Portfolio() {
             <div className="utt-diplome">
               <div className="utt-img"></div>
               <p>
-                Diplôme d’ingénieur en Informatique et Systèmes d’Information
+                Engineering degree in Computer Science and Information Systems
               </p>
             </div>
           </div>
@@ -126,32 +124,32 @@ function Portfolio() {
           target="_blank"
           rel="noreferrer"
         >
-          <button className="cv-btn">Télécharger mon CV</button>
+          <button className="cv-btn">Download my resume</button>
         </a>
       </section>
 
       <section ref={skillsSectionRef} className="skills-section-container">
-        <h2 className="white-colored section-title">Mes compétences</h2>
+        <h2 className="white-colored section-title">My skills</h2>
         <div className="skills-list">
           <div className="skill-item">
             <img src={dev_front_end_logo} />
-            <h4>DEV FRONT END</h4>
+            <h4>Dev Front End</h4>
             <p className="skill-text">
               HTML, CSS, Javascript (ES8), React, Responsive Design
             </p>
           </div>
           <div className="skill-item">
             <img src={dev_back_end_logo} />
-            <h4>DEV BACK END</h4>
+            <h4>Dev Back End</h4>
             <p className="skill-text">
               Node JS, ExpressJS, MongoDB, MYSQL, API Rest
             </p>
           </div>
           <div className="skill-item">
             <img src={gestion_projet_logo} />
-            <h4>GESTION DE PROJET</h4>
+            <h4>Project Management</h4>
             <p className="skill-text">
-              Analyse du besoin client Maquettage et test de solutions
+              Analysis of customer needs Modeling and testing of solutions,
             </p>
             <p className="skill-text">Jira, Trello, Miro</p>
           </div>
@@ -159,7 +157,7 @@ function Portfolio() {
       </section>
 
       <section ref={projectsSectionRef} className="projects-section-container">
-        <h2 className="black-colored section-title">Mes projets</h2>
+        <h2 className="black-colored section-title">My projects</h2>
         <div className="bd-example w-75">
           <div
             id="carouselExampleCaptions"
@@ -251,7 +249,7 @@ function Portfolio() {
       </section>
 
       <section ref={contactSectionRef} className="contact-section-container">
-        <h2 className="white-colored section-title">Contactez-moi !</h2>
+        <h2 className="white-colored section-title">Contact me !</h2>
         <div className="personal-infos-container">
           <h3>Hugo Manachem</h3>
           <p>06 11 28 68 50</p>
@@ -265,7 +263,7 @@ function Portfolio() {
             onChange={(e) => {
               setMessage(e.target.value);
             }}
-            placeholder="Votre message..."
+            placeholder="Your message..."
           />
           <input
             type="text"
@@ -274,7 +272,7 @@ function Portfolio() {
             onChange={(e) => {
               setName(e.target.value);
             }}
-            placeholder="Votre nom (Obligatoire)"
+            placeholder="Your name (mandatory)"
             required
           />
           <input
@@ -284,20 +282,20 @@ function Portfolio() {
             onChange={(e) => {
               setEmail(e.target.value);
             }}
-            placeholder="Votre adresse mail (Obligatoire)"
+            placeholder="Your email (mandatory)"
             required
           />
-          <button>Envoyer</button>
+          <button>Send</button>
         </form>
       </section>
 
       <footer>
         <p>
-          © 2024 Hugo MANACHEM. All rights Reserved. Design by Pauline DENIZET.
+          &#169; 2024 Hugo MANACHEM. All rights Reserved. Design by Pauline DENIZET.
         </p>
       </footer>
     </>
   );
 }
 
-export default Portfolio;
+export default PortfolioEN;

@@ -362,6 +362,7 @@ a {
   font-weight: 700;
   line-height: 22px;
   color: #f7f7f7;
+  text-transform: uppercase;
 }
 
 .skills-list {
