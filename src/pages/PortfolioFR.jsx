@@ -293,7 +293,8 @@ function PortfolioFR() {
 
       <footer>
         <p>
-        &#169; 2024 Hugo MANACHEM. All rights Reserved. Design by Pauline DENIZET.
+          &#169; 2024 Hugo MANACHEM. All rights Reserved. Maquette by Pauline
+          DENIZET.
         </p>
       </footer>
     </>
