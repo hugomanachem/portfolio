@@ -11,6 +11,7 @@ import trick_or_treat_img from "../assets/trick-or-treat-img.png";
 import dev_front_end_logo from "../assets/dev_front_end_logo.png";
 import dev_back_end_logo from "../assets/dev_back_end_logo.png";
 import gestion_projet_logo from "../assets/gestion_projet_logo.png";
+import ecole_chat_aube_img from "../assets/ecole-chat-aube-img.png";
 
 function PortfolioFR() {
   let homeSectionRef = React.useRef();
@@ -177,6 +178,19 @@ function PortfolioFR() {
             </ol>
             <div className="carousel-inner">
               <div className="carousel-item active">
+                <a href="https://ecole-chat-aube.netlify.app/" target="_blank">
+                  <img
+                    src={ecole_chat_aube_img}
+                    className="bg-opacity-10 d-block w-100"
+                    alt="L'école du chat de l'Aube"
+                  />
+                </a>
+                <div className="carousel-caption d-none d-md-block">
+                  <h5>L'école du chat de l'aube</h5>
+                  <p>React, Javascript, CSS, HTML</p>
+                </div>
+              </div>
+              <div className="carousel-item">
                 <a
                   href="https://ironhack-game-wiki.netlify.app/"
                   target="_blank"
