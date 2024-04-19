@@ -46,7 +46,7 @@ function PortfolioEN() {
   };
 
   const [headline, setHeadline] = useState("");
-  const fullHeadline = "Faull-Stack Developer";
+  const fullHeadline = "Caomputer engineer";
 
   useEffect(() => {
     let index = 0;
@@ -102,10 +102,9 @@ function PortfolioEN() {
           <div className="profil-img"></div>
           <div className="about-text">
             <p>
-              As a software engineer, my experience in project management as
-              well as my web development skills allow me to work effectively in
-              a team to build Full-Stack Web applications in a rigorous and
-              organized manner.
+              My experience in project management and web development allow me
+              to work effectively in a team to build and manage projects, from
+              defining needs to deploying the solution.
             </p>
             <div className="ironhack-diplome">
               <div className="ironhack-img"></div>
@@ -133,6 +132,14 @@ function PortfolioEN() {
         <h2 className="white-colored section-title">My skills</h2>
         <div className="skills-list">
           <div className="skill-item">
+            <img src={gestion_projet_logo} />
+            <h4>Project Management</h4>
+            <p className="skill-text">
+              Analysis of customer needs Modeling and testing of solutions,
+            </p>
+            <p className="skill-text">Jira, Trello, Miro</p>
+          </div>
+          <div className="skill-item">
             <img src={dev_front_end_logo} />
             <h4>Dev Front End</h4>
             <p className="skill-text">
@@ -145,14 +152,6 @@ function PortfolioEN() {
             <p className="skill-text">
               Node JS, ExpressJS, MongoDB, MYSQL, API Rest
             </p>
-          </div>
-          <div className="skill-item">
-            <img src={gestion_projet_logo} />
-            <h4>Project Management</h4>
-            <p className="skill-text">
-              Analysis of customer needs Modeling and testing of solutions,
-            </p>
-            <p className="skill-text">Jira, Trello, Miro</p>
           </div>
         </div>
       </section>

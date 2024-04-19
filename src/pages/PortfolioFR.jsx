@@ -46,7 +46,7 @@ function PortfolioFR() {
   };
 
   const [headline, setHeadline] = useState("");
-  const fullHeadline = "Daéveloppeur Full-Stack";
+  const fullHeadline = "Iangénieur Informatique";
 
   useEffect(() => {
     let index = 0;
@@ -103,11 +103,10 @@ function PortfolioFR() {
           <div className="profil-img"></div>
           <div className="about-text">
             <p>
-              Ingénieur en informatique, mon expérience dans la gestion de
-              projet ainsi que mes compétences en développement Web me
-              permettant de travailler efficacement en équipe pour construire
-              des applications Web Full-Stack de manière rigoureuse et
-              organisée.
+              Mon expérience dans la gestion de projet et le développement Web
+              me permettent de travailler efficacement en équipe pour construire
+              et gérer des projets, de la définition du besoin au déploiement de
+              la solution.
             </p>
             <div className="ironhack-diplome">
               <div className="ironhack-img"></div>
@@ -135,6 +134,14 @@ function PortfolioFR() {
         <h2 className="white-colored section-title">Mes compétences</h2>
         <div className="skills-list">
           <div className="skill-item">
+            <img src={gestion_projet_logo} />
+            <h4>Gestion de projet</h4>
+            <p className="skill-text">
+              Analyse du besoin client Maquettage et test de solutions
+            </p>
+            <p className="skill-text">Jira, Trello, Miro</p>
+          </div>
+          <div className="skill-item">
             <img src={dev_front_end_logo} />
             <h4>Dev Front End</h4>
             <p className="skill-text">
@@ -147,14 +154,6 @@ function PortfolioFR() {
             <p className="skill-text">
               Node JS, ExpressJS, MongoDB, MYSQL, API Rest
             </p>
-          </div>
-          <div className="skill-item">
-            <img src={gestion_projet_logo} />
-            <h4>Gestion de projet</h4>
-            <p className="skill-text">
-              Analyse du besoin client Maquettage et test de solutions
-            </p>
-            <p className="skill-text">Jira, Trello, Miro</p>
           </div>
         </div>
       </section>
